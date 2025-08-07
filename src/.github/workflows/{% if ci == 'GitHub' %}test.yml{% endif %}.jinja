@@ -141,7 +141,7 @@ jobs:
       {{ key }}: {{ value|to_json }}
       {%- endfor %}
       {%- endif %}
-      RUNBOAT_GITHUB_TOKEN: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
+      RUNBOAT_GITHUB_TOKEN: {% raw %}${{ secrets.GIT_PUSH_TOKEN }}{% endraw %}
     steps:
       - uses: actions/checkout@v4
         with:

@@ -30,7 +30,6 @@ def test_bootstrap(tmp_path: Path, odoo_version: float, cloned_template: Path):
         "repo_slug": REPO_SLUG,
         "repo_name": "Test repo",
         "repo_description": "Test repo description",
-        "ci": "Travis",
     }
     run_copy(str(cloned_template), tmp_path, data=data, defaults=True, unsafe=True)
     # When loading YAML files, we are also testing their syntax is correct, which

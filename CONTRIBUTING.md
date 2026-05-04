@@ -1,11 +1,12 @@
 # Contribution guideline
 
-## Set up a development environment
+## Develop and test
 
-To install CLI apps, you are encouraged to use
-[pipx](https://pipxproject.github.io/pipx/).
+To develop the template you need `copier` which you can install by following its
+[documentation](https://copier.readthedocs.io/en/stable/#installation).
 
-To develop, you need [Poetry](https://python-poetry.org/).
+Test dependencies are listed in `pyproject.toml` using the `dev`
+[dependency group](https://packaging.python.org/en/latest/specifications/dependency-groups/).
 
 Poetry will install all other dependencies for you to start hacking right away:
 
@@ -32,6 +33,9 @@ Specifically, to run tests:
 ```bash
 poetry run pytest
 ```
+
+To run tests, the easiest is `uv run pytest`. This will automatically install the `dev`
+group in a local `.venv` virtual environment and run the tests.
 
 ## General XXP guidelines
 

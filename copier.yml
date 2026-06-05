@@ -83,6 +83,11 @@ generate_requirements_txt:
     Generate requirements.txt from addons manifests and optional overrides in setup.py
     files.
 
+postgres_image:
+  type: str
+  default: ""
+  help: "Custom PostgreSQL Docker image to use in CI (e.g. pgvector/pgvector:pg16). Leave empty to use the default image for the Odoo version."
+
 use_ruff:
   default: "{% if odoo_version < 17.0 -%}no{% else %}yes{% endif %}"
   type: bool
